@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap");
+
+/* =--------------------------------------= Vars =------------------= */
+:root {
+	--main-color: rgb(29, 243, 201);
+	--text-color: rgb(138, 138, 138);
+	--bg-color: rgb(31, 31, 31);
+	--white-color: rgb(255, 255, 255);
+	--dark-color: rgb(7, 7, 7);
+	--border-color: rgba(255, 255, 255, 0.1);
+	--font-family-sour: "Sour Gummy", sans-serif;
+	--font-family-dm: "DM Sans", sans-serif;
+	--transition-main: all 0.4s;
+}
+
+/* =--------------------------------------= Resets =------------------= */
+* {
+	font-family: var(--font-family-sour);
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+body {
+	background: #131313;
+	height: 100vh;
+	overflow-x: hidden;
+}
+img {
+	width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: var(--white-color);
+	font-family: var(--font-family-dm);
+}
+span {
+	color: var(--main-color);
+}
+p {
+	color: var(--text-color);
+}
+section {
+	padding: 5rem 0;
+}
+
+/* =--------------------------------------= ReUsable Classes Styles =------------------= */
+.wrapper {
+	position: relative;
+	z-index: 1;
+}
+.container {
+	width: 80%;
+	margin: auto;
+	max-width: 94rem;
+}
+.btns {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+}
+.btn {
+	background: var(--main-color);
+	padding: 0.875rem 1.875rem;
+	border-radius: 0.4rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: var(--dark-color);
+	transition: var(--transition-main);
+}
+.btn:hover {
+	transform: translateY(-0.2rem);
+}
+.btn_no_bg {
+	text-transform: capitalize;
+	color: var(--white-color);
+	text-decoration: underline;
+	transition: var(--transition-main);
+}
+.btn_no_bg:hover {
+	color: var(--main-color);
+	transform: translateY(-0.2rem);
+}
+.section__top {
+	text-align: center;
+	margin-bottom: 6.25rem;
+}
+.section__top h2 {
+	font-size: 1.875rem;
+}
+
+/* =--------------------------------------= Custom Animation Styles =------------------= */
+.particles__animation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 100%;
+	pointer-events: none;
+	z-index: -5;
+}
+/* =--------------------------------------= Header Section Styles =------------------= */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4.5rem;
+	width: 100%;
+	padding: 2rem 7%;
+	background: var(--bg-color-01);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	transition: var(--transition-main);
+}
+header.active {
+	background: rgba(31, 31, 31, 0.9);
+	border-bottom: 0.1rem solid var(--border-color);
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba(29, 243, 201, 0.7);
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+nav a.logo img {
+	width: 12.5rem;
+}
+nav .links {
+	display: flex;
+	gap: 1.5rem;
+}
+nav .links a {
+	color: var(--white-color);
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	transition: var(--transition-main);
+}
+nav .links a:hover {
+	color: var(--main-color);
+	transform: translateY(-0.2rem);
+}
+nav .socials {
+	display: flex;
+	gap: 1rem;
+}
+nav .socials a {
+	color: var(--white-color);
+	font-size: 1.5rem;
+	transition: var(--transition-main);
+}
+nav .socials a:hover {
+	color: var(--main-color);
+	transform: translateY(-0.2rem);
+}
+
+/* =--------------------------------------= Hero Section Styles =------------------= */
+.hero {
+	padding-top: 5rem;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hero .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.hero .container .hero__text {
+	width: 50%;
+}
+.hero .container .hero__text h4 {
+	color: var(--text-color);
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+.hero .container .hero__text h1 {
+	font-size: 4rem;
+}
+.hero .container .hero__text h2 {
+	font-size: 3.6rem;
+	font-weight: normal;
+	line-height: 0.9;
+}
+.hero .container .hero__text p {
+	margin: 1.875rem 0;
+	font-size: 1.125rem;
+	width: 80%;
+	line-height: 1.7;
+}
+.hero .container .hero__text a.btn {
+	font-size: 1.25em;
+	padding: 1.125rem 3.125rem;
+}
+.hero .container .hero__text a.btn:hover {
+	transform: translateY(-0.2rem);
+}
+.hero .container .hero__image {
+	width: 40%;
+	position: relative;
+	border-radius: 0 0 37.5rem 37.5rem;
+	overflow: hidden;
+}
+.hero .container .hero__image .hero__bg__image {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+/* =--------------------------------------= About Section Styles =------------------= */
+.about .container {
+	background: var(--dark-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 0.313em;
+	padding: 3.125em;
+}
+.about .container .about__text {
+	width: 50%;
+}
+.about .container .about__text h5 {
+	font-size: 1.125em;
+	color: var(--text-color);
+	text-transform: capitalize;
+}
+.about .container .about__text h2 {
+	font-size: 2.813em;
+	margin: 1.563rem 0 0.313rem;
+}
+.about .container .about__text h4 {
+	font-size: 1.875rem;
+	margin-bottom: 1.25rem;
+}
+.about .container .about__text p {
+	line-height: 1.8;
+}
+.about .container .about__text ul {
+	color: var(--white-color);
+	margin: 1.875rem 0 1.25rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.875rem;
+}
+.about .container .about__text ul li {
+	width: 45%;
+	font-weight: bold;
+	display: flex;
+	gap: 0.625rem;
+	margin-bottom: 1.5rem;
+}
+.about .container .about__text ul li i {
+	color: var(--main-color);
+}
+.about .container .about__image {
+	width: 35%;
+}
+
+/* =--------------------------------------= Services Section Styles =------------------= */
+.services .services__Boxes {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.services .services__Boxes .service__box {
+	width: 30%;
+	text-align: center;
+	padding: 3.125rem 1.25rem;
+	border: 0.063rem solid var(--border-color);
+	border-radius: 0.625rem;
+	transition: var(--transition-main);
+}
+.services .services__Boxes .service__box:hover {
+	border: 0.063rem solid var(--main-color);
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba(29, 243, 201, 0.7);
+	background: rgba(7, 7, 7, 0.8);
+	transform: translateY(-0.2rem);
+}
+.services .services__Boxes .service__box i {
+	color: var(--main-color);
+	font-size: 4.375rem;
+	margin-bottom: 1.875rem;
+}
+.services .services__Boxes .service__box h3 {
+	font-size: 1.563rem;
+	margin-bottom: 1.25rem;
+}
+.services .services__Boxes .service__box p {
+	margin-bottom: 2.5rem;
+	font-size: 1rem;
+	line-height: 1.8;
+}
+
+/* =--------------------------------------= Projects Section Styles =------------------= */
+.projects .container .project__Box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 3.125rem;
+	gap: 6.15rem;
+}
+.projects .container .project__Box img {
+	width: 50%;
+}
+.projects .container .project__Box .project__text {
+	width: 50%;
+}
+.projects .container .project__Box .project__text h4 {
+	font-size: 1.25rem;
+	margin-bottom: 1.25rem;
+	font-weight: normal;
+}
+.projects .container .project__Box .project__text h3 a {
+	font-size: 2.5rem;
+	color: var(--white-color);
+	transition: var(--transition-main);
+}
+.projects .container .project__Box .project__text h3 a:hover {
+	color: var(--main-color);
+}
+.projects .container .project__Box .project__text p {
+	margin: 1.875rem 0 3.125rem;
+	line-height: 1.8;
+}
+.projects .container .project__Box .project__text .btn__icon {
+	display: block;
+	width: 3.125rem;
+	height: 3.125rem;
+	border: 0.063rem solid var(--border-color);
+	background: var(--main-color);
+	color: var(--dark-color);
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 3.125rem;
+	border-radius: 30%;
+	transition: all 0.5s;
+	rotate: 45deg;
+}
+.projects .container .project__Box .project__text .btn__icon:hover {
+	transform: translateY(-0.4rem);
+	background: var(--dark-color);
+	color: var(--main-color);
+	border: 0.063rem solid var(--main-color);
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba(29, 243, 201, 0.7);
+}
+.projects .container .project__Box .left__right {
+	flex-direction: row-reverse;
+}
+
+/* =--------------------------------------= Contacts Section Styles =------------------= */
+.contacts .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contacts .container .contacts__socials {
+	width: 30%;
+}
+.contacts .container .contacts__socials h2 {
+	color: var(--white-color);
+	margin-bottom: 2.5rem;
+}
+.contacts .container .contacts__socials .contacts__socials__links {
+	display: flex;
+	flex-direction: column;
+}
+.contacts .container .contacts__socials .contacts__socials__links a {
+	color: var(--white-color);
+	font-size: 1.25rem;
+	margin-bottom: 1.563rem;
+	position: relative;
+	left: 0;
+	transition: var(--transition-main);
+}
+.contacts .container .contacts__socials .contacts__socials__links a i {
+	color: var(--bg-color);
+	margin-right: 0.313rem;
+	width: 2.813rem;
+	height: 2.813rem;
+	line-height: 2.813rem;
+	text-align: center;
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+	background: var(--main-color);
+}
+.contacts .container .contacts__socials .contacts__socials__links a:hover {
+	left: 1rem;
+}
+.contacts form {
+	width: 60%;
+	text-align: center;
+}
+.contacts form .contacts__form__btn {
+	outline: none;
+	padding: 0.938rem 2.188rem;
+	font-size: 1.125rem;
+	cursor: pointer;
+}
+.contacts form .contacts__form__inputs {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.contacts form .contacts__form__inputs input,
+.contacts form .contacts__form__inputs textarea {
+	border-radius: 0.313rem;
+	padding: 1.25rem;
+	outline: none;
+	background: var(--bg-color);
+	color: var(--white-color);
+	margin-bottom: 1.875rem;
+	border: 0.063rem solid var(--border-color);
+	transition: var(--transition-main);
+}
+.contacts form .contacts__form__inputs input:hover,
+.contacts form .contacts__form__inputs textarea:hover {
+	border-color: var(--text-color);
+}
+.contacts form .contacts__form__inputs input:focus,
+.contacts form .contacts__form__inputs textarea:focus {
+	border-color: var(--main-color);
+}
+.contacts form .contacts__form__inputs input {
+	width: 48%;
+}
+.contacts form .contacts__form__inputs textarea {
+	width: 100%;
+}
+
+/* =--------------------------------------= Footer Styles =------------------= */
+footer {
+	padding: 1.1rem;
+	font-size: 0.875rem;
+	text-align: center;
+	background: rgba(31, 31, 31, 0.7);
+	border-top: 0.1rem solid var(--border-color);
+	box-shadow: 0.1rem 0.1rem 0.5rem rgba(29, 243, 201, 0.7);
+}
+footer .copyright {
+	color: var(--main-color)
+}
